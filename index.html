@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--
+Alyssa Zulaik. This index is the main webpage that calculates the sinusoidal functions
+Note to Alyssa: c + TAB for commenting 
+-->
+<html>
+    <head>
+        <title>Sinusoidal Function calculator</title>
+        <meta charset="UTF-8">
+        <script src="Function.js"></script>
+        <link rel="stylesheet" type="text/css" href="index.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onload="draw()">
+        <!-- Navigation Page -->
+        <div>
+            <ul id="navigation">
+                <li><a href="#top">Home</a></li>
+                <li><a href="#aboutdiv">About</a></li>
+                <li><a href="#calcdiv">Calculator</a></li>
+                <li><a href="mailto:chealyssa_zulaik@s.thevillageschool.com">Contact Me</a></li>
+                <li><a href="https://www.omnicalculator.com/math/phase-shift" target="_blank">Help</a></li>
+            </ul>
+        </div>
+
+        <!--         Page Title  -->
+        <div id="pageTitle"> 
+            <img src ="title.png"
+                 alt="An Infinity Of Sinusoidal Function"
+                 style="width:100%; height:100%">
+        </div>
+        <!-- empty space for navigation purposes -->
+        <div id="aboutdiv" class="empty-space1">
+        </div>
+        <!-- Overview part -->
+        <div id="about">
+            <h2 class="center">
+                About this webpage
+            </h2>
+            <p>This webpage calculates the Infinity number of sinusoidal model 
+                is when the parameters a, b, and d of the sinusoidal functions 
+                are altered: <br>
+            </p>    
+            <p class="center"> f(x)= a sin(bx) + d or g(x)= a cos(bx) + d
+            </p>
+            <ul id="aboutEq">
+                <li> a is the <b>amplitude</b> </li>
+                <li> 360/b is the <b>period</b></li>
+                <li> d is the <b>principle axis</b></li>
+            </ul>
+            <!--            </div>-->
+        </div>
+
+        <!-- random picture to occupy the empty div -->
+        <div id="calcdiv" class="empty-space2">
+            <img src ="wave.gif"
+                 alt="a wave gif"
+                 style="width:100%; height:100%">
+        </div>
+        <!-- A tiny of what a sinusoidal is -->
+        <div id="calculator">
+            <h2 class="center">
+                Sinusoidal Function calculator 
+            </h2>
+            <p>This calculator will draw a function based on the selected 
+                function and inputted max, min and period.</p>
+        </div>
+        <!-- Formula result  -->
+        <div id="functionEq"> 
+            f(x) = a function(bx) + d
+        </div> 
+
+        <!-- All the inputs -->
+        <div id="inputs">  
+            <div>
+                <form class="center">
+                    Choose type of functions
+                    <select id="function" name="function">
+                        <option value="Sin">Sin</option>
+                        <option value="Cos">Cos</option>
+                    </select>
+                </form>
+                <!-- maximum input -->
+                <form class="center">
+                    <input id="max" type="text" placeholder="Maximum Value" maxlength="10"/>
+                </form>
+                <!-- minimum input -->
+                <form class="center">
+                    <input id="min" type="text" placeholder="Minimum Value" maxlength="10"/>
+                </form>
+                <!-- Period input -->
+                <form class="center">
+                    <input id="period" type="text" placeholder="Period" maxlength="10"/>
+                </form>
+                <form class="center"> <!-- Button to calculate -->
+                    <input id="calcButton" type="button"
+                           onclick="draw(document.getElementById('function').value),
+                                       sinFunction()" 
+
+                           value="click to calculate">
+                </form>
+                <!--        functionTest(documentquerySelectorAll('#function, #max, #min, #period').value)"-->
+                <!-- cosFunction()" -->
+            </div>
+        </div>
+        <!-- Canvas  -->
+        <div class="center">
+            <canvas id="canvas" width="1004" height="432"></canvas>
+        </div>
+        <!-- End credit  -->
+        <div id="credit">
+            <p>Website built with ♥ by Alyssa</p>
+        </div>
+    </body> 
+
+</html>

@@ -1,0 +1,246 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 3, 2021, 8:21:13 AM
+    Author     : chealyssa
+*/
+/*body 
+{
+        background: linear-gradient(-45deg, #edb7dd, #edc7b7, #b7edc7, #b7dded);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+}
+
+@keyframes gradient {
+        0% {
+                background-position: 0% 50%;
+        }
+        50% {
+                background-position: 100% 50%;
+        }
+        100% {
+                background-position: 0% 50%;
+        }
+}*/
+*
+{
+    background-color: #F9E7DC;
+    font-family: "Avenir", Helvetica, sans-serif;
+}
+html
+{
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: transparent;
+}
+
+/*#pageTitle
+{    
+    background-color: transparent;
+    position: fixed;
+    top: 70px;
+    text-indent: 120px;
+    padding-top: 10px;
+    margin: 0px;
+    width: 100%;
+    background-color: #EEE2DC;
+    color: #AC3B61;
+    z-index: 100;
+    background: inherit;
+}*/
+#about
+{
+    margin-top: -3px;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    /*    top:130px;*/
+    left: 130px;
+    position:relative;
+    max-width: 83%;
+    overflow-wrap: break-word;
+    /*    background-color: #EDC7B7;*/
+    background-color: transparent;
+    z-index: -1;
+}
+
+#calculator
+{
+    margin-top:0px;
+    left: 130px;
+    position:relative;
+    max-width: 80%;
+    overflow-wrap: break-word;
+    /*    background-color: #EDC7B7;*/
+    background-color: transparent;
+}
+h2
+{
+    padding-top: 20px;
+    color: #4949A5;
+    text-transform: uppercase;
+    /*    text-indent: 120px;*/
+    /*    background-color: #EDC7B7;*/
+    background-color: transparent;
+}
+p
+{
+    margin: 0px 120px 0px;
+    font-size: 110%;
+    /*    background-color: #EDC7B7;*/
+    background-color: transparent;
+}
+#aboutEq
+{
+    /*    background-color: #EDC7B7;*/
+    background-color: transparent;
+    left: 130px;
+    position:relative;
+    max-width: 80%;
+}
+b
+{
+    /*    background-color: #EDC7B7;*/
+    background-color: transparent;
+}
+.center
+{
+    text-align: center;
+}
+#navigation
+{
+    top:0px;
+    /* right: 120px;*/
+    position:fixed;   
+    width: 93%;
+    padding: 30px;
+    margin: 0px auto 0px auto;
+    /* border-top: 2px solid #123C69;  Change this as needed */     
+/*    border-bottom: 0.1px solid #123C69;*/
+    text-align: center;
+    z-index: 100;
+    background-color: #F9E7DC;
+}
+
+li 
+{
+    display: inline;
+    margin: 10px 50px; /* Change this as needed */
+    background-color: transparent;
+}
+
+#max , #min , #period 
+{
+    display: inline;
+}
+
+a 
+{
+    color: #000000;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 6px 18px 5px 18px;
+    background-color: transparent;
+}
+
+a:hover
+{
+    color: #AC3B61; /* Change this later */
+    /*background-color: #ffffff;*/
+}
+
+#functionEq
+{
+    background-color: transparent;
+    text-align: center;
+    position:relative;
+    padding: 20px;  /*Change this as needed */
+    font-size: 150%; 
+
+}
+
+.empty-space1
+{
+    position:relative;
+    height: 80px;
+    width: 100%;
+    background-color: transparent;
+}
+.empty-space2
+{
+    position:relative;
+    height: 80px;
+    width: 100%;
+    background-color: black;
+}
+
+canvas
+{
+    margin-top:40px;
+    left: 130px;
+    background-color: white;
+}
+input[type=text]
+{
+    width:30%;
+    border:2px solid #123C69;
+    border-radius:4px;
+    margin:8px 0;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+}
+
+input[type=text]:focus{
+    border-color:#E3AFBC;
+    box-shadow:0 0 8px 0 #E3AFBC;
+}
+
+.form-inline {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+#function
+{
+    width:17%;
+    border:2px solid #123C69;
+    border-radius:4px;
+    margin:8px 0;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+}
+
+input[type=button]
+{
+    text-transform: uppercase;
+    width:30%;
+    border:2px solid #123C69;
+    border-radius:4px;
+    margin:8px 0;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+}
+
+input[type=button]:hover
+{
+    background-color: #E3AFBC;    
+}
+
+#credit 
+{
+    margin-top: 70px;
+    width:100%;
+    text-align: center;
+    background-color: #f9DCEE; 
+    padding: 30px;
+}
